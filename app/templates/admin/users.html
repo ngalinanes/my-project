@@ -1,0 +1,54 @@
+<!-- app/templates/admin/users.html -->
+
+{% import "bootstrap/utils.html" as utils %}
+{% extends "base.html" %}
+{% block title %}Afiliados{% endblock %}
+{% block body %}
+<div class="content-section">
+  <div class="outer">
+    <div class="middle">
+      <div class="inner">
+        <br/>
+        {{ utils.flashed_messages() }}
+        <br/>
+        <h1 style="text-align:center;">Afiliados</h1>
+        {% if users %}
+          <hr class="intro-divider">
+          <div class="center">
+            <table class="table table-striped table-bordered">
+              <thead>
+                <tr>
+                  <th width="30%"> Name </th>
+                  <th width="15%"> Afiliado Nº </th>
+                  <th width="15%"> Username </th>
+                  <th width="15%"> Mail </th>
+                </tr>
+              </thead>
+              <tbody>
+              {% for user in users %}
+                {% if user.is_admin %}
+                    <tr style="background-color: #aec251; color: white;">
+                        <td> <i class="fa fa-key"></i> Admin </td>
+                        <td> N/A </td>
+                        <td> N/A </td>
+                        <td> N/A </td>
+                    </tr>
+                {% else %}
+                    <tr>
+                      <td> {{ user.first_name }} {{ user.last_name }} </td>
+                      <td> {{ user.nro_afiliado }} </td>
+                      <td> {{ user.username }} </td>
+                      <td> {{ user.email }} </td>
+                    </tr>
+                {% endif %}
+              {% endfor %}
+              </tbody>
+            </table>
+          </div>
+        {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,10 @@
+
+*.pyc
+
+instance/
+
+migrations/
+
+.vscode/
+
+my-project/
