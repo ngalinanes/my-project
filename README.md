@@ -6,6 +6,7 @@ Para correr el ambiente debe estar instalado:
 - virtualenv
 - virtualenvwrapper
 - Tener actualizado pip -> pip install --upgrade pip
+- MySQL -> una db creada my_project
 
 $ source /usr/local/bin/virtualenvwrapper.sh
  
