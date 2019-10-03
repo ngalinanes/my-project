@@ -1,6 +1,8 @@
 # my-project
 Proyecto de la facultad
- 
+
+Probado desde Linux Ubuntu 18.04 corriendo sobre Windows 10 (Windows Subsystem for Linux)
+
 Para correr el ambiente debe estar instalado: 
 - Python 2.7
 - virtualenv
