@@ -28,6 +28,7 @@ $ export FLASK_APP=run.py
 
 La configuracion de la base de datos que use fue:
 - Cree un usuario en MySQL y le di acceso a todo
+
 $ mysql -u root
 
 mysql> CREATE USER 'admin'@'localhost' IDENTIFIED BY 'password';
