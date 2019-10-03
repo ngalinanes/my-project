@@ -24,3 +24,22 @@ $ export FLASK_CONFIG=development
  
 $ export FLASK_APP=run.py
  
+------------------------------------------------------------------
+
+La configuracion de la base de datos que use fue:
+- Cree un usuario en MySQL y le di acceso a todo
+$ mysql -u root
+
+mysql> CREATE USER 'admin'@'localhost' IDENTIFIED BY 'password';
+
+mysql> CREATE DATABASE my_project;
+
+mysql> GRANT ALL PRIVILEGES ON my_project . * TO 'admin'@'localhost';
+
+- Cree una carpeta instance en la raiz del repo, y dentro un archivo config.py:
+# instance/config.py
+
+SECRET_KEY = 'p9Bv<3Eid9%$i01'
+
+SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://admin:password@localhost/my_project'
+
